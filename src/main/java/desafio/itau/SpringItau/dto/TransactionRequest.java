@@ -9,6 +9,7 @@ public class TransactionRequest {
     @NotNull
     @Min(0)
     private Double valor;
+    @NotNull
     private OffsetDateTime dataHora;
 
     public Double getValor() {
