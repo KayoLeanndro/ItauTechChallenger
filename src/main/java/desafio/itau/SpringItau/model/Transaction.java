@@ -7,7 +7,7 @@ public class Transaction {
     private Double valor;
     private OffsetDateTime dataHora;
 
-    private Transaction(final double valor, final OffsetDateTime dataHora){
+    public Transaction(final double valor, final OffsetDateTime dataHora){
         this.valor = valor;
         this.dataHora = dataHora;
     }

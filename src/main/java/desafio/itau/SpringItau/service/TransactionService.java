@@ -1,6 +1,8 @@
 package desafio.itau.SpringItau.service;
 
+import desafio.itau.SpringItau.dto.TransactionRequest;
 import desafio.itau.SpringItau.model.Transaction;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Service;
 
 import java.time.OffsetDateTime;
@@ -17,7 +19,7 @@ public class TransactionService {
         transactions.add(transaction);
     }
 
-    public void removeTransaction(){
+    public void clearTransactions(){
         transactions.clear();
     }
 
