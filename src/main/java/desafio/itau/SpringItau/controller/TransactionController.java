@@ -28,11 +28,11 @@ public class TransactionController {
             return ResponseEntity.unprocessableEntity().build();
         }
 
-        if(request.getDataHora() == null ||  request.getValor() < 0 || request.getValor() == null){
+        if(request.getDataHora() == null ||  request.getValor() <= 0 || request.getValor() == null){
             return ResponseEntity.badRequest().build();
         }
 
-        transactionService.addTransaction(new Transaction(request.getValor(), request.getDataHora()));
+        transactionService.addTransaction(request);
         return ResponseEntity.status(HttpStatus.CREATED).build();
 
     }
